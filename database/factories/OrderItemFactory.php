@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\OrderItem;
+use App\Models\Item;
+use App\Models\Order;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class OrderItemFactory extends Factory
@@ -22,7 +24,8 @@ class OrderItemFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'itemID' => Item::factory(),
+            'orderID' => Order::factory()
         ];
     }
 }

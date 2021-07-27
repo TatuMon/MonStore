@@ -21,7 +21,6 @@ class Items extends Migration
             $table->string('company');
             $table->string('platforms');
             $table->timestamp('release_date');
-            $table->integer('availables');
             $table->timestamps();
         });
     }
