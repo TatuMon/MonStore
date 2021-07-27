@@ -16,7 +16,11 @@ class Items extends Migration
         Schema::create('items', function(Blueprint $table){
             $table->id();
             $table->string('name');
-            $table->string('brand');
+            $table->decimal('price', 6, 2);
+            $table->string('genre');
+            $table->string('company');
+            $table->string('platforms');
+            $table->timestamp('release_date');
             $table->integer('availables');
             $table->timestamps();
         });
