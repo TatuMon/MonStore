@@ -10,6 +10,7 @@
     </head>
     <body>
         <form method="POST" action="games">
+            @csrf
             <input type="submit" value="post"/>
         </form>
     </body>

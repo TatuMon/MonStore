@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use MarcReichel\IGDBLaravel\Models\Game;
+use MarcReichel\IGDBLaravel\Models\Artwork;
+use MarcReichel\IGDBLaravel\Models\Cover;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +18,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
+});
+
+Route::post('games', function(){
+    $game = Game::with(['cover'])->where('total_rating', '>=', 80)->whereHas('cover')->all();
+    return view('test', [
+        'games' => $game
+    ]);
 });
