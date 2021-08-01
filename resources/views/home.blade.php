@@ -13,9 +13,6 @@
     </head>
     <body>
         <x-header />
-        @foreach ($games as $game)
-            <x-game-card :game="$game"/>
-            <hr>
-        @endforeach
+        <x-games-section :games="$games"/>
     </body>
 </html>

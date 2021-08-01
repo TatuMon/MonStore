@@ -1,2 +1,16 @@
-//Here goes ONLY the imports. Each page and/or component should have it's own scss file.
+//Here goes ONLY the imports and default styling. Each page and/or component should have it's own scss file.
 @import "./variables";
+@import "./game-card.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body, html{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: $font;
+    background: $background;
+}
+
+a{
+    color: $font;
+    text-decoration: none;
+}
