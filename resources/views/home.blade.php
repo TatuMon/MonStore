@@ -13,6 +13,6 @@
     </head>
     <body>
         <x-header />
-        <x-games-section :games="$games"/>
+        <x-games-section :games="$newones" id="novedades"/>
     </body>
 </html>

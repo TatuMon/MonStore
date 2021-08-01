@@ -8,10 +8,10 @@ use MarcReichel\IGDBLaravel\Models\Game;
 class GameController extends Controller
 {
     public function index(){
-        $games = Game::with(['cover', 'websites', 'platforms'])->where('total_rating', '>=', 80)->where('total_rating_count', '>=', 1000)->whereHas('cover')->whereNull('parent_game')->orderByDesc('total_rating')->all();
+        $newones = Game::whereHas('cover')->whereHas('websites')->whereHas('platforms')->with(['cover', 'websites', 'platforms'])->where('total_rating_count', '>=', 50)->orderByDesc('first_release_date')->get();
         
         return view('home', [
-            'games' => $games
+            'newones' => $newones
         ]);
     }
 
