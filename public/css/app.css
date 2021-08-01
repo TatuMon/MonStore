@@ -2,13 +2,17 @@
 .section-wrapper {
   position: relative;
 }
-.section-wrapper .game-card {
+.section-wrapper .carousel {
+  display: grid;
+  transition: 0.5s transform;
+}
+.section-wrapper .carousel .game-card {
   width: 265px;
   border-radius: 10px;
   margin: 10px;
   margin-bottom: 50px;
 }
-.section-wrapper .game-card img {
+.section-wrapper .carousel .game-card img {
   width: 100%;
   height: 90%;
   border-top-left-radius: 10px;
@@ -16,12 +20,12 @@
   margin-bottom: 0;
   display: block;
 }
-.section-wrapper .game-card .info-wrapper {
+.section-wrapper .carousel .game-card .info-wrapper {
   background-color: #1A1A1B;
   margin: 0;
   padding: 5px;
 }
-.section-wrapper .game-card .info-wrapper .game-name {
+.section-wrapper .carousel .game-card .info-wrapper .game-name {
   font-size: 1.5rem;
   font-weight: bolder;
   line-height: 1;
@@ -30,10 +34,10 @@
   white-space: nowrap;
   display: block;
 }
-.section-wrapper .game-card .info-wrapper .game-rating {
+.section-wrapper .carousel .game-card .info-wrapper .game-rating {
   margin: 0;
 }
-.section-wrapper .game-card .info-wrapper .platforms {
+.section-wrapper .carousel .game-card .info-wrapper .platforms {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
