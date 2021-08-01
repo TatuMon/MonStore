@@ -1842,6 +1842,10 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./home */ "./resources/js/home.js");
+
+__webpack_require__(/*! ./carousel */ "./resources/js/carousel.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -1872,6 +1876,28 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/carousel.js":
+/*!**********************************!*\
+  !*** ./resources/js/carousel.js ***!
+  \**********************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./resources/js/home.js":
+/*!******************************!*\
+  !*** ./resources/js/home.js ***!
+  \******************************/
+/***/ (() => {
+
+$(function () {
+  $('#main').fadeIn(500);
+});
 
 /***/ }),
 

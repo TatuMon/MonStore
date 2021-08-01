@@ -2,7 +2,7 @@
 
 <div class="section-wrapper">
     <h1 class="section-title">Novedades</h1>
-    <div class="carousel">
+    <div class="carousel" id="carousel-0">
         @foreach ($games as $game)
             <div id="game-{{ $loop->index }}" class="game-card">
                 <a href="/games/{{ $game->slug }}" style="inline-block">
@@ -24,7 +24,7 @@
         @endforeach
     </div>
     <div class="carousel-arrows-wrapper">
-        <div class="arrow-prev center-v"> &#10094; </div>
-        <div class="arrow-next center-v"> &#10095; </div>
+        <div class="news-arrow-prev center-v"> &#10094; </div>
+        <div class="news-arrow-next center-v"> &#10095; </div>
     </div>
 </div>

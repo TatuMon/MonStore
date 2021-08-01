@@ -1,6 +1,7 @@
 //Here goes ONLY the imports and default styling. Each page and/or component should have it's own scss file.
 @import "./variables";
-@import "./games-section.scss";
+@import "./home";
+@import "./games-section";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body, html{

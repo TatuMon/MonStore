@@ -1,10 +1,20 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
+#main {
+  display: none;
+}
+
 .section-wrapper {
   position: relative;
+  margin: 1.5vw;
+  overflow: hidden;
 }
 .section-wrapper .carousel {
+  width: 100%;
+  position: relative;
   display: grid;
+  gap: 20px;
   transition: 0.5s transform;
+  grid-template-columns: repeat(10, 265px);
 }
 .section-wrapper .carousel .game-card {
   width: 265px;
