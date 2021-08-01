@@ -23,8 +23,6 @@
             </div>
         @endforeach
     </div>
-    <div class="carousel-arrows-wrapper">
-        <div class="news-arrow-prev center-v"> &#10094; </div>
-        <div class="news-arrow-next center-v"> &#10095; </div>
-    </div>
+    <div class="news-arrow-prev carousel-arrow"> &#10094; </div>
+    <div class="news-arrow-next carousel-arrow"> &#10095; </div>
 </div>

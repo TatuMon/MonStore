@@ -5,11 +5,29 @@
 
 .section-wrapper {
   position: relative;
-  margin: 1.5vw;
   overflow: hidden;
+  width: 100%;
+}
+.section-wrapper .carousel-arrow {
+  cursor: pointer;
+  font-size: 70px;
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 2.5rem);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.section-wrapper .news-arrow-next {
+  right: 0px;
+}
+.section-wrapper .news-arrow-prev {
+  left: 0px;
 }
 .section-wrapper .carousel {
-  width: 100%;
+  margin: 20px;
+  width: calc(100% - 70px);
   position: relative;
   display: grid;
   gap: 20px;
@@ -19,7 +37,7 @@
 .section-wrapper .carousel .game-card {
   width: 265px;
   border-radius: 10px;
-  margin: 10px;
+  margin: 10px 0px;
   margin-bottom: 50px;
 }
 .section-wrapper .carousel .game-card img {
@@ -55,6 +73,22 @@
   display: block;
 }
 
+@media (max-width: 1000px) {
+  .carousel-arrow {
+    display: none;
+  }
+
+  .carousel {
+    width: 100% !important;
+    margin: auto !important;
+    grid-template-columns: repeat(10, 150px) !important;
+    gap: 5px !important;
+    overflow-x: scroll !important;
+  }
+  .carousel .game-card {
+    width: 150px !important;
+  }
+}
 body, html {
   margin: 0;
   font-family: "Roboto", sans-serif;
