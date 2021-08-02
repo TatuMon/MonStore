@@ -1,4 +1,7 @@
 <header>
+    <a href="/" id="home">
+        <i class="fas fa-home"></i>
+    </a>
     <a href="/games" id="to-games">
         Check all games
     </a>
