@@ -1,7 +1,7 @@
-@props(['games'])
+@props(['games', 'section'])
 
 <div class="section-wrapper">
-    <h1 class="section-title">Novedades</h1>
+    <h1 class="section-title">{{ $section }}</h1>
     <div class="carousel" id="carousel-0">
         @foreach ($games as $game)
             <div id="game-{{ $loop->index }}" class="game-card">

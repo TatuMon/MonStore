@@ -15,7 +15,8 @@
     <body>
         <x-header />
         <div id="main">
-            <x-games-section :games="$newones" id="novedades"/>
+            <x-games-section :games="$newones" :section="$section = 'Most Recent Games'" id="novedades"/>
+            <x-games-section :games="$best" :section="$section = 'Best Rated'"/>
         </div>
 
         <script src="js/app.js"></script>
