@@ -1,8 +1,8 @@
 @props(['games', 'section'])
 
 <div class="section-wrapper">
-    <h1 class="section-title">{{ $section }}</h1>
-    <div class="carousel" id="carousel-0">
+    <h1 class="section-title">{{ $section['name'] }}</h1>
+    <div class="carousel" id="carousel-{{ $section['index'] }}">
         @foreach ($games as $game)
             <div id="game-{{ $loop->index }}" class="game-card">
                 <a href="/games/{{ $game->slug }}" style="inline-block">
