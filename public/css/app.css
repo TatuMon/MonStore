@@ -3,6 +3,39 @@
   display: none;
 }
 
+header {
+  display: flex;
+  height: 50px;
+  background-color: #1A1A1B;
+}
+header #to-games {
+  font-size: 20px;
+  margin: auto 10px;
+  font-weight: bolder;
+}
+header #search {
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+}
+header #search input {
+  color: whitesmoke;
+  border: 1px solid #9a9b9c;
+  border-radius: 5px;
+  height: 35px;
+  width: 100%;
+  margin: auto;
+  font-size: inherit;
+  background-color: #3A3A3C;
+}
+header #github {
+  margin: auto;
+  margin-left: auto;
+  margin-right: 1.5vw;
+  font-size: 45px;
+}
+
 .section-wrapper {
   position: relative;
   overflow: hidden;
@@ -95,6 +128,10 @@ body, html {
   font-family: "Roboto", sans-serif;
   color: whitesmoke;
   background: #000000;
+}
+
+*:focus {
+  outline: none;
 }
 
 html::-webkit-scrollbar {
