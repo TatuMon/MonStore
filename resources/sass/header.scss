@@ -1,0 +1,41 @@
+header{
+    display: flex;
+    height: 50px;
+    background-color: $container-background;
+
+    #home{
+        font-size: 20px;
+        margin: auto 10px;
+    }
+
+    #to-games{
+        font-size: 20px;
+        margin: auto 10px;
+        font-weight: bolder;
+    }
+
+    #search{
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50vw;
+
+        input{
+            color: whitesmoke;
+            border: 1px solid $input-border;
+            border-radius: 5px;
+            height: 35px;
+            width: 100%;
+            margin: auto;
+            font-size: inherit;
+            background-color: $input-background;
+        }
+    }
+
+    #github{
+        margin: auto;
+        margin-left: auto;
+        margin-right: 1.5vw;
+        font-size: 45px;
+    }
+}
