@@ -19,10 +19,10 @@
       -ms-user-select: none;
           user-select: none;
 }
-.section-wrapper .news-arrow-next {
+.section-wrapper .arrow-next {
   right: 0px;
 }
-.section-wrapper .news-arrow-prev {
+.section-wrapper .arrow-prev {
   left: 0px;
 }
 .section-wrapper .carousel {
