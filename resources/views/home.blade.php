@@ -1,6 +1,5 @@
 <x-layout>
         <x-slot name="title">MonStore</x-slot>
-        <x-header />
         <div id="main">
             <x-games-section :games="$newones" :section="$section = ['index' => 0, 'name' => 'Most Recent']" id="novedades"/>
             <x-games-section :games="$best" :section="$section = ['index' => 1, 'name' => 'Most Rated']"/>
