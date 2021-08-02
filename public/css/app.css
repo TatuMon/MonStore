@@ -6,7 +6,8 @@
 .section-wrapper {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 90%;
+  margin: auto;
 }
 .section-wrapper .carousel-arrow {
   cursor: pointer;
@@ -94,6 +95,19 @@ body, html {
   font-family: "Roboto", sans-serif;
   color: whitesmoke;
   background: #000000;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  background-color: #222222;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #676869;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #9a9b9c;
 }
 
 a {
