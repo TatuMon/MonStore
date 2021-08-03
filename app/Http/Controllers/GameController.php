@@ -24,4 +24,12 @@ class GameController extends Controller
             'games' => $games
         ]);
     }
+
+    public function all(){
+        $games = Game::whereHas('cover')->whereHas('platforms')->with(['cover', 'platforms'])->where('total_rating_count', '>=', 25)->all();
+
+        return view('result', [
+            'games' => $games
+        ]);
+    }
 }
