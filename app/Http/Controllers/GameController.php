@@ -18,7 +18,7 @@ class GameController extends Controller
     }
 
     public function search(){
-        $games = Game::whereHas('cover')->whereHas('platforms')->with(['cover', 'platforms'])->where('total_rating_count', '>=', 25)->search('%' . request('search') . '%')->take(500)->orderByDesc('total_rating')->get();
+        $games = Game::whereHas('cover')->whereHas('platforms')->with(['cover', 'platforms'])->where('total_rating_count', '>=', 25)->search('%' . request('name') . '%')->take(500)->orderByDesc('total_rating')->get();
 
         return view('result', [
             'games' => $games
