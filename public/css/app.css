@@ -1,7 +1,42 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
+#nav-container {
+  display: flex;
+  flex-direction: column;
+  width: 75px;
+  height: 100%;
+  background-color: #1A1A1B;
+  position: fixed;
+  top: 0;
+  font-weight: bolder;
+}
+#nav-container #dropdown {
+  height: 50px;
+  line-height: 50px;
+  font-size: 50px;
+  text-align: center;
+}
+#nav-container nav {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+#nav-container nav a {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 15px;
+}
+#nav-container nav a i {
+  font-size: 25px;
+}
+#nav-container nav a:not(:first-child) {
+  margin-top: 20px;
+}
+
 #main {
   display: none;
   margin-top: 60px;
+  margin-left: 85px;
 }
 
 header {
@@ -14,7 +49,7 @@ header {
   background-color: #1A1A1B;
 }
 header #home {
-  font-size: 20px;
+  font-size: 30px;
   margin: auto 10px;
 }
 header #to-games {
@@ -63,8 +98,7 @@ header #github {
 .section-wrapper {
   position: relative;
   overflow: hidden;
-  width: 90%;
-  margin: auto;
+  width: 100%;
 }
 .section-wrapper .carousel-arrow {
   cursor: pointer;
