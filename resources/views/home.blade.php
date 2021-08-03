@@ -1,5 +1,5 @@
 <x-layout>
-        <x-slot name="title">MonStores | All the information and stores of your favorite games</x-slot>
+        <x-slot name="title">MonStores | All the information of your favorite games</x-slot>
         
         @if (!empty($newones) && !empty($best))
                 <x-games-section :games="$newones" :section="$section = array('index' => 0, 'name' => 'Last additions')" id="novedades"/>
