@@ -1,6 +1,7 @@
 <x-layout>
     <x-slot name="title">{{ request('name') }}</x-slot>
-    @if(!empty($games))
+    
+    @if(!empty($games[0]))
         <div id="result-main">
             @foreach ($games as $game)
                 <x-game-card :loop="$loop" :game="$game"/>

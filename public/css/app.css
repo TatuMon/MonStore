@@ -19,7 +19,7 @@ header #home {
 }
 header #to-games {
   font-size: 20px;
-  margin: auto 10px;
+  margin: auto 5px;
   font-weight: bolder;
 }
 header #search {
@@ -54,6 +54,12 @@ header #github {
   gap: 20px;
 }
 
+@media (max-width: 1000px) {
+  #result-main {
+    width: 100%;
+    gap: 5px;
+  }
+}
 .section-wrapper {
   position: relative;
   overflow: hidden;
@@ -141,6 +147,7 @@ header #github {
 
   .game-card {
     width: 150px !important;
+    margin: auto;
   }
 }
 body, html {

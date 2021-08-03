@@ -6,3 +6,10 @@
     justify-content: center;
     gap: 20px;
 }
+
+@media (max-width: 1000px){
+    #result-main{
+        width: 100%;
+        gap: 5px;
+    }
+}
