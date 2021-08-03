@@ -24,10 +24,6 @@
                     <i class="fas fa-layer-group"></i>
                     Collections
                 </a>
-                <a href="https://github.com/TatuMon/MonStore.git" id="github" target="_blank">
-                    <i class="fab fa-github"></i>
-                    Repo
-                </a>
                 <a href="/info">
                     <i class="fas fa-info"></i>
                     Info
@@ -35,6 +31,10 @@
                 <a href="/contact">
                     <i class="far fa-envelope"></i>
                     Contact
+                </a>
+                <a href="https://github.com/TatuMon/MonStore.git" id="github" target="_blank">
+                    <i class="fab fa-github"></i>
+                    Repo
                 </a>
             </nav>
     
