@@ -40,6 +40,15 @@ header #github {
   font-size: 45px;
 }
 
+#result-main {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 265px);
+  justify-content: center;
+  gap: 20px;
+}
+
 .section-wrapper {
   position: relative;
   overflow: hidden;
@@ -124,7 +133,8 @@ header #github {
     gap: 5px !important;
     overflow-x: scroll !important;
   }
-  .carousel .game-card {
+
+  .game-card {
     width: 150px !important;
   }
 }

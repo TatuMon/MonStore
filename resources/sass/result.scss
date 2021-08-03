@@ -1,0 +1,8 @@
+#result-main{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 265px);
+    justify-content: center;
+    gap: 20px;
+}
