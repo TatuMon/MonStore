@@ -1842,7 +1842,7 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./home */ "./resources/js/home.js");
+__webpack_require__(/*! ./main-content */ "./resources/js/main-content.js");
 
 __webpack_require__(/*! ./carousel */ "./resources/js/carousel.js");
 
@@ -1908,13 +1908,13 @@ $('.arrow-prev').on('click', function () {
 
 /***/ }),
 
-/***/ "./resources/js/home.js":
-/*!******************************!*\
-  !*** ./resources/js/home.js ***!
-  \******************************/
+/***/ "./resources/js/main-content.js":
+/*!**************************************!*\
+  !*** ./resources/js/main-content.js ***!
+  \**************************************/
 /***/ (() => {
 
-$(function () {
+$(window).on('load', function () {
   $('#main').fadeIn(500);
 });
 

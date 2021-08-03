@@ -1,3 +1,3 @@
 require('./bootstrap');
-require('./home')
+require('./main-content')
 require('./carousel');

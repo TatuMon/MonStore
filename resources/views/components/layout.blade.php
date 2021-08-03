@@ -14,6 +14,10 @@
     </head>
     <body>
         <x-header />
-        {{ $slot }}
+        <div id="main">
+            {{ $slot }}
+        </div>
+
+        <script src="js/app.js"></script>
     </body>
 </html>
