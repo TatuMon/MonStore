@@ -32,4 +32,12 @@ class GameController extends Controller
             'games' => $games
         ]);
     }
+
+    public function game($game_slug){
+        $game = Game::where('slug', $game_slug)->with(['cover', 'platforms', 'websites', 'genres', 'collection', 'dlcs', 'parent_game', 'videos', 'screenshots'])->get();
+
+        return view('game', [
+            'game' => $game[0]
+        ]);
+    }
 }
