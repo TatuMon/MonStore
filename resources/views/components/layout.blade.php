@@ -14,7 +14,7 @@
     </head>
     <body>
         <x-header />
-        <div id="nav-container" x-data="{show : false}" @click.away="show = false">
+        <div id="nav-container">
             <nav>
                 <a href="/games">
                     <i class="fas fa-gamepad"></i>

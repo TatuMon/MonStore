@@ -22,7 +22,7 @@ header{
         margin: auto;
         margin-left: auto;
         margin-right: auto;
-        width: 50vw;
+        width: 70vw;
 
         input{
             color: whitesmoke;
@@ -41,5 +41,11 @@ header{
         margin-left: auto;
         margin-right: 1.5vw;
         font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    #to-games{
+        display: none;
     }
 }
