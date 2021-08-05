@@ -1,14 +1,15 @@
 //Here goes ONLY the imports and default styling. Each page and/or component should have it's own scss file.
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @import "./variables";
 @import "./layout";
 @import "./header";
 @import "./result";
 @import "./games-section";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import "./game-page";
 
 body, html{
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color: $font;
     background: $background;
 }
@@ -33,4 +34,13 @@ body, html{
 a{
     color: $font;
     text-decoration: none;
+}
+
+.btn-link{
+    width: 10vw;
+    text-align: center;
+    font-weight: bolder;
+    border: 1px solid #9a9b9c;
+    border-radius: 5px;
+    padding: 10px;
 }
