@@ -36,11 +36,11 @@ class GameController extends Controller
 
     public function game($game_slug){
         $game = Game::where('slug', $game_slug)->with(['cover', 'platforms', 'websites', 'genres', 'collection', 'dlcs', 'parent_game', 'videos', 'screenshots'])->get();
-        $webEnum = WebEnum::STEAM();
+        $webEnum = WebEnum::Official();
 
         return view('game', [
             'game' => $game[0],
-            'webEnum' => $webEnum
+            'webEnum' => compact('webEnum')
         ]);
     }
 }

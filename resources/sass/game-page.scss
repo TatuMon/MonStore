@@ -94,5 +94,10 @@
         div{
             margin: auto;
         }
+
+        .game-links{
+            display: flex;
+            flex-direction: column;
+        }
     }
 }

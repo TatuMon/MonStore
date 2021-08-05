@@ -64,11 +64,10 @@
         <div id="links">
             <div id="buy">
                 <h3>Buy</h3>
-                <div id="buy-links">
+                <div id="buy-links" class="game-links">
                     @foreach ($game->websites as $website)
-                        <p>{{ $website['category'] }}</p>
-                        @if ($website['category'] == 16)
-                            <a href="{{ $website['url'] }}">{{ $webEnum->search($website['category']) }}</a>
+                        @if (10 <= $website['category'] && $website['category'] != 14 && $website['category'] <= 17)
+                            <a href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
                         @endif
                     @endforeach
                 </div>
