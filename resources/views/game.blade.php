@@ -13,6 +13,8 @@
 
             <div id="description">
                 <p>{{ $game->summary }}</p>
+                <p id="rating"><i class="fas fa-star"></i>{{ round($game->total_rating) }}/100</p>
+                    
                 <p class="genres">
                     @foreach($game->genres as $genre)
                         {{ $genre['name'] }}
@@ -29,11 +31,6 @@
                         @endif
                     @endforeach
                 </p>
-            </div>
-
-            <div id="rating">
-                <h3><i class="fas fa-star"></i>{{ round($game->total_rating) }}/100</h3>
-                <h3>Votes: {{ $game->total_rating_count }}<h3>
             </div>
 
             <div id="add-info-links">
@@ -63,25 +60,33 @@
         </div>
         <div id="links">
             <div id="buy">
-                <h3>Buy</h3>
+                <h3><i class="fas fa-shopping-cart"></i> Buy on:</h3>
                 <div id="buy-links" class="game-links">
                     @foreach ($game->websites as $website)
                         @if (10 <= $website['category'] && $website['category'] != 14 && $website['category'] <= 17)
-                            <a href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
+                            <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
                         @endif
                     @endforeach
                 </div>
             </div>
             <div id="communities">
                 <h3>Communities</h3>
-                <div id="comm-links">
-
+                <div id="comm-links" class="game-links">
+                    @foreach ($game->websites as $website)
+                        @if ($website['category'] == 14 || $website['category'] == 18)
+                            <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
+                        @endif
+                    @endforeach
                 </div>
             </div>
             <div id="official">
                 <h3>Official</h3>
-                <div id="off-links">
-
+                <div id="off-links" class="game-links">
+                    @foreach ($game->websites as $website)
+                        @if ($website['category'] >= 1 && $website['category'] <= 9)
+                            <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>

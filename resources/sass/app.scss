@@ -12,6 +12,7 @@ body, html{
     font-family: 'Rubik', sans-serif;
     color: $font;
     background: $background;
+    scroll-behavior: smooth;
 }
 
 *:focus{

@@ -19,6 +19,6 @@ final class WebEnum extends Enum{
     private const Reddit = 14;
     private const Itch = 15;
     private const EpicGames	= 16;
-    private const Gog = 17;
+    private const GOG = 17;
     private const Discord = 18;
 }
