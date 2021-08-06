@@ -1846,6 +1846,8 @@ __webpack_require__(/*! ./main-content */ "./resources/js/main-content.js");
 
 __webpack_require__(/*! ./carousel */ "./resources/js/carousel.js");
 
+__webpack_require__(/*! ./info-slider */ "./resources/js/info-slider.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -1904,6 +1906,21 @@ $('.arrow-prev').on('click', function () {
   }
 
   console.log(-550 * index);
+});
+
+/***/ }),
+
+/***/ "./resources/js/info-slider.js":
+/*!*************************************!*\
+  !*** ./resources/js/info-slider.js ***!
+  \*************************************/
+/***/ (() => {
+
+$(function () {
+  var dropdown = $('.dropdown');
+  dropdown.on('click', function () {
+    $(this).siblings('.content').slideToggle(500);
+  });
 });
 
 /***/ }),

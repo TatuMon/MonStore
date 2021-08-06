@@ -18,3 +18,5 @@ Route::get('/', [GameController::class, 'index']);
 Route::get('/search', [GameController::class, 'search']);
 Route::get('/games', [GameController::class, 'all']);
 Route::get('/games/{game:slug}', [GameController::class, 'game']);
+
+Route::get('/info', fn() => view('info'));
