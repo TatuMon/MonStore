@@ -41,14 +41,16 @@
         </div>
         <div id="game-multimedia">
             <div id="trailer">
-                @foreach ($game->videos as $video)
-                    @if ($video['name'] = 'trailer')
-                        <iframe class="video"
-                        src="https://www.youtube.com/embed/{{ $video['video_id'] }}">
-                        </iframe>
-                        @break
-                    @endif
-                @endforeach
+                @if (isset($game->videos))
+                    @foreach ($game->videos as $video)
+                        @if ($video['name'] = 'trailer')
+                            <iframe class="video"
+                            src="https://www.youtube.com/embed/{{ $video['video_id'] }}">
+                            </iframe>
+                            @break
+                        @endif
+                    @endforeach
+                @endif
             </div>
             <div id="screenshots">
                 @foreach ($game->screenshots as $ss)
