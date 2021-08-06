@@ -28,10 +28,6 @@
                     <i class="fas fa-info"></i>
                     Info
                 </a>
-                <a href="/contact">
-                    <i class="far fa-envelope"></i>
-                    Contact
-                </a>
                 <a href="https://github.com/TatuMon/MonStore.git" id="github" target="_blank">
                     <i class="fab fa-github"></i>
                     Repo

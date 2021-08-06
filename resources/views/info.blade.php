@@ -25,5 +25,27 @@
                 </p>
             </div>
         </section>
+        <section id="who">
+            <div class="dropdown btn-link">
+                <h3 class="title">Who developed MonStore?</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="content">
+                <p>
+                    Hi, I'm Juan Cruz Montiel
+                </p>
+            </div>
+        </section>
+        <section id="contact-ways">
+            <div class="dropdown btn-link">
+                <h3 class="title">How can I contact with the developer?</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="content">
+                <p>
+                    Thru insta :3
+                </p>
+            </div>
+        </section>
     </div>
 </x-layout>
