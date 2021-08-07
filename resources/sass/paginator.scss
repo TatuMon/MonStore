@@ -1,4 +1,25 @@
 #paginator{
-    text-align: center;
+    user-select: none;
+    margin: 50px auto 0px;
     display: flex;
+    justify-content: center;
+
+    .pag-link{
+        border: 1px solid $input-border;
+        width: 40px;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+
+        
+    }
+
+    .pag-link:hover{
+        background-color: whitesmoke;
+        color: black;
+    }
+}
+
+.disable-link{
+    pointer-events: none;
 }

@@ -1,3 +1,3 @@
 @props(['page'])
 
-<a class="pag-link" href="/?page={{ $page }}">{{ $page }}</a>
+<a class="pag-link">{{ $page }}</a>

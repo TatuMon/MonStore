@@ -19,10 +19,9 @@ class GameController extends Controller
     }
 
     public function search(){
-        $query = Game::whereHas('cover')->whereHas('platforms')->with(['cover', 'platforms'])->where('total_rating_count', '>=', 25)->search('%' . request('name') . '%')->take(500)->orderByDesc('total_rating')->get();
-        $pages = $query->count() / 10;
-        $games = $query;
-
+        $pages = Game::whereHas('cover')->whereHas('platforms')->with(['cover', 'platforms'])->where('total_rating_count', '>=', 25)->search('%' . request('name') . '%')->take(500)->get()->count() / 10;
+        $games = Game::whereHas('cover')->whereHas('platforms')->with(['cover', 'platforms'])->where('total_rating_count', '>=', 25)->search('%' . request('name') . '%')->skip((request('page')-1)*10)->take(10)->get();
+        
         return view('result', [
             'games' => $games,
             'pages' => $pages
@@ -30,13 +29,12 @@ class GameController extends Controller
     }
 
     public function all(){
-        $query = Game::whereHas('cover')->whereHas('platforms')->where('total_rating_count', '>=', 25)->with(['cover', 'platforms'])->all();
-        $pages = $query->count() / 10; 
-        $games = $query;
-
+        $pages = Game::whereHas('cover')->whereHas('platforms')->where('total_rating_count', '>=', 25)->with(['cover', 'platforms'])->count() / 10; 
+        $games = Game::whereHas('cover')->whereHas('platforms')->where('total_rating_count', '>=', 25)->with(['cover', 'platforms'])->skip((request('page')-1)*10)->take(10)->get();
+        
         return view('result', [
             'games' => $games,
-            'pages' => $pages
+            'pages' => ceil($pages)
         ]);
     }
 

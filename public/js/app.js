@@ -1848,6 +1848,8 @@ __webpack_require__(/*! ./carousel */ "./resources/js/carousel.js");
 
 __webpack_require__(/*! ./info-slider */ "./resources/js/info-slider.js");
 
+__webpack_require__(/*! ./paginator */ "./resources/js/paginator.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -1933,6 +1935,21 @@ $(function () {
 
 $(window).on('load', function () {
   $('#main').fadeIn(500);
+});
+
+/***/ }),
+
+/***/ "./resources/js/paginator.js":
+/*!***********************************!*\
+  !*** ./resources/js/paginator.js ***!
+  \***********************************/
+/***/ (() => {
+
+$('.pag-link').on('click', function () {
+  var searchParams = new URLSearchParams(window.location.search);
+  searchParams.set("page", $(this).text());
+  window.location.search = searchParams.toString();
+  console.log('yikes');
 });
 
 /***/ }),
