@@ -21,7 +21,7 @@
             </div>
             <div class="content">
                 <p>
-                    All the information present on this site, is provided by IGDB through the <a href="https://api-docs.igdb.com/" style="text-decoration: underline">IGDB API</a>.
+                    All the information present on this site, is provided by IGDB through the <a href="https://api-docs.igdb.com/" class="text-link">IGDB API</a>.
                 </p>
             </div>
         </section>
@@ -32,7 +32,8 @@
             </div>
             <div class="content">
                 <p>
-                    Hi, I'm Juan Cruz Montiel
+                    MonStore was developed by Juan Cruz Montiel, me.
+                    I'm a self-taught web developer who loves programming. I really like creating websites, but that's not the only thing I like to do: I want to create my very own videogame and other useful and fun applications. If you want to know what I'm working on right now, check mi GitHub <a href="https://github.com/TatuMon/MonStore.git" class="text-link">here<a>.
                 </p>
             </div>
         </section>
@@ -43,7 +44,7 @@
             </div>
             <div class="content">
                 <p>
-                    Thru insta :3
+                    You can contact me via email: juancruzmontielar@gmail.com
                 </p>
             </div>
         </section>
