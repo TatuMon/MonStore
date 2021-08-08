@@ -13,6 +13,7 @@
             <a class="pag-link" href="">...</a>
             <x-paginator-link :page="$pages"/>
         @else
+            <!-- Check if selected page isn't the last one -->  
             @if (request('page') < $pages)
                 <x-paginator-link :page="1"/>
                 <a class="pag-link disable-link" href="">...</a>
@@ -27,8 +28,6 @@
                     @for ($i = $pages - 8; $i <= $pages; $i++)
                         <x-paginator-link :page="$i"/>
                     @endfor
-                <a class="pag-link disable-link" href="">...</a>
-                <x-paginator-link :page="$pages"/>
             @endif
         @endif
     @endif
