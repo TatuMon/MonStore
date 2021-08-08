@@ -180,10 +180,7 @@ header #github {
   white-space: nowrap;
   display: block;
 }
-.game-card .info-wrapper .game-rating {
-  margin: 0;
-}
-.game-card .info-wrapper .platforms {
+.game-card .info-wrapper .gamecard-info {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
