@@ -261,6 +261,13 @@ header #github {
 }
 #game #game-main-info #add-info-links a {
   margin: 10px auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+#game #game-main-info .game-link {
+  display: flex;
 }
 #game #game-multimedia {
   width: 100%;
@@ -285,17 +292,23 @@ header #github {
 }
 #game #links {
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-#game #links div {
-  margin: 0 auto;
-}
-#game #links .game-links {
+#game #links #buy, #game #links #communities, #game #links #official {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
   text-align: center;
+}
+#game #links #official .game-links {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  justify-items: center;
+  text-align: center;
+}
+#game #links #official .game-links a {
+  width: 50%;
 }
 
 #info-main {

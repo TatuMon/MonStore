@@ -50,7 +50,16 @@
 
             a{
                 margin: 10px auto;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: block;
             }
+        }
+
+        .game-link{
+            display: flex;
+
         }
     }
 
@@ -82,18 +91,25 @@
 
     #links{
         width: 100%;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
 
-        div{
+        #buy, #communities, #official{
+            width: 100%;
             margin: 0 auto;
+            text-align: center;
         }
 
-        .game-links{
+        #official .game-links{
             width: 100%;
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(2, 0.5fr);
+            justify-items: center;
             text-align: center;
+
+            a{
+                width:50%;
+            }
         }
     }
 }

@@ -62,7 +62,7 @@
         </div>
         <div id="links">
             <div id="buy">
-                <h3><i class="fas fa-shopping-cart"></i> Buy on:</h3>
+                <h3><i class="fas fa-shopping-cart"></i>BUY:</h3>
                 <div id="buy-links" class="game-links">
                     @foreach ($game->websites as $website)
                         @if (10 <= $website['category'] && $website['category'] != 14 && $website['category'] <= 17)
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div id="communities">
-                <h3>Communities</h3>
+                <h3>COMMUNITIES:</h3>
                 <div id="comm-links" class="game-links">
                     @foreach ($game->websites as $website)
                         @if ($website['category'] == 14 || $website['category'] == 18)
@@ -82,7 +82,7 @@
                 </div>
             </div>
             <div id="official">
-                <h3>Official</h3>
+                <h3>OFFICIAL:</h3>
                 <div id="off-links" class="game-links">
                     @foreach ($game->websites as $website)
                         @if ($website['category'] >= 1 && $website['category'] <= 9)
