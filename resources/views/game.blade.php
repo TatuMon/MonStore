@@ -60,6 +60,22 @@
                 @endforeach
             </div>
         </div>
+        <div id="add-content">
+            @if($game->dlcs)
+                <div id="dlcs">
+                    @foreach ($game->dlcs as $dlc)
+                        <x-game-card-dlc :game="$dlc" :loop="$loop"/>
+                    @endforeach
+                </div>
+            @endif
+            @if ($game->expansions)
+                <div id="expansions">
+                    @foreach ($game->expansions as $expansion)
+                        <x-game-card-dlc :game="$expansion" :loop="$loop"/>
+                    @endforeach
+                </div>
+            @endif
+        </div>
         <div id="links">
             <div id="buy">
                 <h3><i class="fas fa-shopping-cart"></i>BUY:</h3>
