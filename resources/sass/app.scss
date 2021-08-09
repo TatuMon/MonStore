@@ -5,6 +5,7 @@
 @import "./header";
 @import "./result";
 @import "./games-section";
+@import "./game-card";
 @import "./game-page";
 @import "./info";
 @import "./paginator";
@@ -50,4 +51,8 @@ a{
 
 .text-link{
     text-decoration: underline;
+}
+
+.txt-center{
+    text-align: center;
 }

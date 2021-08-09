@@ -152,6 +152,19 @@ header #github {
   grid-template-columns: repeat(10, 265px);
 }
 
+@media (max-width: 1000px) {
+  .carousel-arrow {
+    display: none;
+  }
+
+  .carousel {
+    width: 100% !important;
+    margin: auto !important;
+    grid-template-columns: repeat(10, 150px) !important;
+    gap: 5px !important;
+    overflow-x: scroll !important;
+  }
+}
 .game-card {
   width: 265px;
   border-radius: 10px;
@@ -193,18 +206,6 @@ header #github {
 }
 
 @media (max-width: 1000px) {
-  .carousel-arrow {
-    display: none;
-  }
-
-  .carousel {
-    width: 100% !important;
-    margin: auto !important;
-    grid-template-columns: repeat(10, 150px) !important;
-    gap: 5px !important;
-    overflow-x: scroll !important;
-  }
-
   .game-card {
     width: 150px !important;
     margin: auto;
@@ -289,6 +290,22 @@ header #github {
 #game #game-multimedia #screenshots img {
   width: 20vw;
   border-radius: 10px;
+}
+#game #add-content {
+  margin: auto;
+}
+#game #add-content .extra-content {
+  display: flex;
+}
+#game #add-content .extra-content .game-card {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#game #add-content .extra-content :first-child {
+  margin-left: auto;
+}
+#game #add-content .extra-content :last-child {
+  margin-right: auto;
 }
 #game #links {
   width: 100%;
@@ -409,4 +426,8 @@ a {
 
 .text-link {
   text-decoration: underline;
+}
+
+.txt-center {
+  text-align: center;
 }

@@ -89,6 +89,27 @@
         }
     }
 
+    #add-content{
+        margin: auto;
+
+        .extra-content{
+            display: flex;
+
+            .game-card{
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            :first-child{
+                margin-left: auto;
+            }
+
+            :last-child{
+                margin-right: auto;
+            }
+        }
+    }
+
     #links{
         width: 100%;
         display: grid;
