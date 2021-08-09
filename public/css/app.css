@@ -157,6 +157,10 @@ header #github {
   border-radius: 10px;
   margin: 10px 0px;
   margin-bottom: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .game-card img {
   width: 100%;
