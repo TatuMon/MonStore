@@ -1,0 +1,10 @@
+1628516785-9128-2111736492,1628516785.8126,GET,/games?page=37,"App\Http\Controllers\GameController@all",200,231.37998580933,request
+1628516798-2824-1091571911,1628516798.2662,GET,/games?page=40,"App\Http\Controllers\GameController@all",200,1388.710975647,request
+1628516950-2186-1109994643,1628516950.1784,GET,/games?page=40,"App\Http\Controllers\GameController@all",200,85.543870925903,request
+1628516963-3192-1134285676,1628516963.304,GET,/games?page=25,"App\Http\Controllers\GameController@all",200,1454.087972641,request
+1628516972-9851-280466824,1628516972.9695,GET,/games?page=34,"App\Http\Controllers\GameController@all",200,57.897090911865,request
+1628517034-3364-1366539998,1628517034.3211,GET,/games?page=34,"App\Http\Controllers\GameController@all",200,51.379919052124,request
+1628517044-1795-1078505610,1628517044.1635,GET,/games?page=339,"App\Http\Controllers\GameController@all",200,1456.3009738922,request
+1628517052-4237-665217574,1628517052.4018,GET,/games?page=331,"App\Http\Controllers\GameController@all",200,1340.5919075012,request
+1628517089-5163-1484454962,1628517089.5029,GET,/games?page=331,"App\Http\Controllers\GameController@all",200,66.177129745483,request
+1628517099-7096-693889144,1628517099.6936,GET,/games?page=329,"App\Http\Controllers\GameController@all",200,1019.7350978851,request

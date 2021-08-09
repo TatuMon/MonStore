@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name="title">{{ request('name') }}</x-slot>
+    <x-slot name="title">Games List</x-slot>
     
     @if(!empty($games[0]))
         <div id="result-main">
@@ -10,4 +10,6 @@
     @else
         <h1 style="text-align: center">No games were found</h1>
     @endif
+
+    <x-paginator :pages="$pages"/>
 </x-layout>

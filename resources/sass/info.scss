@@ -1,0 +1,33 @@
+#info-main{
+    width: 70%;
+    margin: auto;
+
+    #what-is{
+        height: auto;
+        display: block;
+    }
+
+    .dropdown{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        cursor: pointer;
+        user-select: none;
+
+        .title{
+            margin-left: auto;
+        }
+
+        i{
+            margin: auto;
+            margin-left: auto;
+            margin-right: 10px;
+        }
+    }
+
+    .content{
+        display: none;
+        font-size: 25px;
+    }
+}
