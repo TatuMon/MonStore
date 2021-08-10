@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use MarcReichel\IGDBLaravel\Models\Game;
+use MarcReichel\IGDBLaravel\Models\Genre;
 use App\Http\Helpers\WebEnum;
 
 class GameController extends Controller
@@ -29,9 +30,10 @@ class GameController extends Controller
     }
 
     public function all(){
-        $pages = Game::whereHas('cover')->whereHas('platforms')->where('total_rating_count', '>=', 25)->with(['cover', 'platforms', 'genres'])->count() / 10; 
-        $games = Game::whereHas('cover')->whereHas('platforms')->where('total_rating_count', '>=', 25)->with(['cover', 'platforms', 'genres'])->skip((request('page'))*10)->take(10)->get();
+        $pages = Game::whereHas('cover')->whereHas('platforms')->whereHas('genres')->where('total_rating_count', '>=', 25)->with(['cover', 'platforms', 'genres'])->count() / 10; 
+        $games = Game::whereHas('cover')->whereHas('platforms')->whereHas('genres')->where('total_rating_count', '>=', 25)->with(['cover', 'platforms', 'genres'])->orderBy(request('by'), request('how'))->skip((request('page'))*10)->take(10)->get();
         
+        dd($games[0]->genres);
         return view('result', [
             'games' => $games,
             'pages' => ceil($pages)
@@ -42,7 +44,6 @@ class GameController extends Controller
         $game = Game::where('slug', $game_slug)->with(['cover', 'platforms', 'websites', 'genres', 'collection', 'dlcs', 'dlcs.cover', 'dlcs.platforms', 'dlcs.genres', 'expansions', 'expansions.cover', 'expansions.platforms', 'expansions.genres', 'parent_game', 'videos', 'screenshots'])->get();
         $webEnum = WebEnum::Official();
 
-        //dd($game[0]->expansions[1]);
         return view('game', [
             'game' => $game[0],
             'webEnum' => compact('webEnum')

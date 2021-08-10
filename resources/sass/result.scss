@@ -7,6 +7,44 @@
     gap: 20px;
 }
 
+#order-page{
+    margin: 0;
+
+    #order{
+        width: 10vw;
+        margin-bottom: 0;
+        position: relative;
+
+        .filter-btn{
+            max-width: 100%;
+            margin: 0;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .filter-opts{
+            position: absolute;
+            left: 10px;
+            width: 100%;
+            background-color: $container-background;
+            border: 1px solid $border;
+
+            .filter-opt{
+                display: block;
+                text-align: center;
+                height: 50px;
+                line-height: 50px;
+                user-select: none;
+                cursor: pointer;
+
+                i{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1000px){
     #result-main{
         width: 100%;

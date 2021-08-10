@@ -114,6 +114,45 @@ header #github {
   gap: 20px;
 }
 
+#order-page {
+  margin: 0;
+}
+#order-page #order {
+  width: 10vw;
+  margin-bottom: 0;
+  position: relative;
+}
+#order-page #order .filter-btn {
+  max-width: 100%;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+#order-page #order .filter-opts {
+  position: absolute;
+  left: 10px;
+  width: 100%;
+  background-color: #1A1A1B;
+  border: 1px solid #676869;
+}
+#order-page #order .filter-opts .filter-opt {
+  display: block;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+#order-page #order .filter-opts .filter-opt i {
+  font-size: 20px;
+}
+
 @media (max-width: 1000px) {
   #result-main {
     width: 100%;

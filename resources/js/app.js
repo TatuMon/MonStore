@@ -2,4 +2,4 @@ require('./bootstrap');
 require('./main-content');
 require('./carousel');
 require('./info-slider');
-require('./paginator');
+require('./add-parameters');

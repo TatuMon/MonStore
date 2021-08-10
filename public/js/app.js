@@ -1834,6 +1834,32 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./resources/js/add-parameters.js":
+/*!****************************************!*\
+  !*** ./resources/js/add-parameters.js ***!
+  \****************************************/
+/***/ (() => {
+
+//Add new parameter to url
+//This allows to use paginator in both search and game route
+//This goes with paginator
+$('.pag-link').on('click', function () {
+  var searchParams = new URLSearchParams(window.location.search);
+  searchParams.set("page", $(this).text() - 1);
+  window.location.search = searchParams.toString();
+}); //This goes with the order and filter functionality
+
+$('.filter-opt').on('click', function () {
+  var by = $(this).attr('data-by');
+  var how = $(this).attr('data-how');
+  var searchParams = new URLSearchParams(window.location.search);
+  searchParams.set('by', by);
+  searchParams.set('how', how);
+  window.location.search = searchParams.toString();
+});
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -1848,7 +1874,7 @@ __webpack_require__(/*! ./carousel */ "./resources/js/carousel.js");
 
 __webpack_require__(/*! ./info-slider */ "./resources/js/info-slider.js");
 
-__webpack_require__(/*! ./paginator */ "./resources/js/paginator.js");
+__webpack_require__(/*! ./add-parameters */ "./resources/js/add-parameters.js");
 
 /***/ }),
 
@@ -1935,22 +1961,6 @@ $(function () {
 
 $(window).on('load', function () {
   $('#main').fadeIn(500);
-});
-
-/***/ }),
-
-/***/ "./resources/js/paginator.js":
-/*!***********************************!*\
-  !*** ./resources/js/paginator.js ***!
-  \***********************************/
-/***/ (() => {
-
-//Add new parameter to url
-//This allows to use paginator in both search and game route
-$('.pag-link').on('click', function () {
-  var searchParams = new URLSearchParams(window.location.search);
-  searchParams.set("page", $(this).text() - 1);
-  window.location.search = searchParams.toString();
 });
 
 /***/ }),
