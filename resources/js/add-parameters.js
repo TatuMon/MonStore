@@ -20,7 +20,7 @@ $('.filter-opt').on('click', function(){
 
 //This goes with the filter functionality
 $('#genres').children().on('click', function(){
-    let genre = $(this).text();
+    let genre = $(this).attr('data-genre');
     var searchParams = new URLSearchParams(window.location.search);
     searchParams.set('genre', genre);
     window.location.search = searchParams.toString();

@@ -61,20 +61,22 @@
             </div>
         </div>
         <div id="add-content">
-            <h2 class="txt-center">Expansions and DLCs<h2>
-            @if($game->dlcs)
-                <div id="dlcs" class="extra-content">
-                    @foreach ($game->dlcs as $dlc)
-                        <x-game-card-dlc :game="$dlc" :loop="$loop"/>
-                    @endforeach
-                </div>
-            @endif
-            @if ($game->expansions)
-                <div id="expansions" class="extra-content">
-                    @foreach ($game->expansions as $expansion)
-                        <x-game-card-dlc :game="$expansion" :loop="$loop"/>
-                    @endforeach
-                </div>
+            @if ($game->dlcs || $game->expansions)
+                <h2 class="txt-center">Expansions and DLCs<h2>
+                @if($game->dlcs)
+                    <div id="dlcs" class="extra-content">
+                        @foreach ($game->dlcs as $dlc)
+                            <x-game-card-dlc :game="$dlc" :loop="$loop"/>
+                        @endforeach
+                    </div>
+                @endif
+                @if ($game->expansions)
+                    <div id="expansions" class="extra-content">
+                        @foreach ($game->expansions as $expansion)
+                            <x-game-card-dlc :game="$expansion" :loop="$loop"/>
+                        @endforeach
+                    </div>
+                @endif
             @endif
         </div>
         <div id="links">

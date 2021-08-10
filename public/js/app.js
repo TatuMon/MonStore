@@ -1859,7 +1859,7 @@ $('.filter-opt').on('click', function () {
 }); //This goes with the filter functionality
 
 $('#genres').children().on('click', function () {
-  var genre = $(this).text();
+  var genre = $(this).attr('data-genre');
   var searchParams = new URLSearchParams(window.location.search);
   searchParams.set('genre', genre);
   window.location.search = searchParams.toString();
@@ -1882,6 +1882,8 @@ __webpack_require__(/*! ./carousel */ "./resources/js/carousel.js");
 __webpack_require__(/*! ./info-slider */ "./resources/js/info-slider.js");
 
 __webpack_require__(/*! ./add-parameters */ "./resources/js/add-parameters.js");
+
+__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './game-page'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 /***/ }),
 

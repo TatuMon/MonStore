@@ -115,20 +115,19 @@ header #github {
 }
 
 #order-page {
-  margin: auto;
+  margin: 20px auto;
   display: flex;
+  flex-shrink: 0;
   width: 100%;
 }
 #order-page #order {
-  margin-right: auto;
   margin-left: auto;
 }
 #order-page #filters {
-  margin-left: auto;
   margin-right: auto;
 }
 #order-page #order, #order-page #filters {
-  width: 10vw;
+  width: auto;
   position: relative;
 }
 #order-page #order .filter-btn, #order-page #filters .filter-btn {
@@ -149,7 +148,6 @@ header #github {
   background-color: #1A1A1B;
   border: 1px solid #676869;
   overflow-y: scroll;
-  z-index: 2;
 }
 #order-page #order .filter-opts #genres, #order-page #filters .filter-opts #genres {
   max-height: 250px;

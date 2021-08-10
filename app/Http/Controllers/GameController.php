@@ -25,11 +25,13 @@ class GameController extends Controller
         $games = Game::whereHas('cover')->whereHas('platforms')->with(['cover', 'platforms', 'genres'])->where('total_rating_count', '>=', 25)->where('name', 'ilike', '%'.request('name').'%');
 
         //If order is set, order the query
-        if(request('by') && request('how')){
-            $games = $games->orderBy(request('by'), request('how'))->skip((request('page')-1)*10)->take(10)->get();
-        } else {
-            $games = $games->skip((request('page')-1)*10)->take(10)->get();
+        if(request('genre')){
+            $games = $games->whereIn('genres', [request('genre')]);
+        } elseif(request('by') && request('how')) {
+            $games = $games->orderBy(request('by'), request('how'));
         }
+
+        $games = $games->skip((request('page'))*10)->take(10)->get();
         
         //Get all the available genres and companies
         $genres = Genre::all();

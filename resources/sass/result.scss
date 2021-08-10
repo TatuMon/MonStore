@@ -8,22 +8,21 @@
 }
 
 #order-page{
-    margin: auto;
+    margin: 20px auto;
     display: flex;
+    flex-shrink: 0;
     width: 100%;
 
     #order{
-        margin-right: auto;
         margin-left: auto;
     }
 
     #filters{
-        margin-left: auto;
         margin-right: auto;
     }
 
     #order, #filters{
-        width: 10vw;
+        width: auto;
         position: relative;
 
         .filter-btn{
@@ -42,7 +41,6 @@
             background-color: $container-background;
             border: 1px solid $border;
             overflow-y: scroll;
-            z-index: 2;
 
             #genres{
                 max-height: 250px;

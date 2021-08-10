@@ -17,13 +17,13 @@
             <div class="filter-opts" x-show="show" @click.away="show = false">
                 <div x-show="genres" id="genres">
                     @foreach ($genres as $genre)
-                        <a class="filter-opt">{{ $genre->name }}</a>
+                        <a data-genre="{{ $genre->id }}" class="filter-opt">{{ $genre->name }}</a>
                     @endforeach
                 </div>
             </div>
         </div>
     </div>
-    @if(!empty($games))
+    @if(!$games->isEmpty())
         <div id="result-main">
             @foreach ($games as $game)
                 <x-game-card :loop="$loop" :game="$game"/>
