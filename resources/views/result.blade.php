@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    @if(!empty($games[0]))
+    @if(!empty($games))
         <div id="result-main">
             @foreach ($games as $game)
                 <x-game-card :loop="$loop" :game="$game"/>

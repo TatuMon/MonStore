@@ -20,22 +20,46 @@ class GameController extends Controller
     }
 
     public function search(){
-        $pages = Game::whereHas('cover')->whereHas('platforms')->with(['cover', 'platforms', 'genres'])->where('total_rating_count', '>=', 25)->search('%' . request('name') . '%')->take(500)->get()->count() / 10;
-        $games = Game::whereHas('cover')->whereHas('platforms')->with(['cover', 'platforms', 'genres'])->where('total_rating_count', '>=', 25)->search('%' . request('name') . '%')->skip((request('page')-1)*10)->take(10)->get();
+        //Base query
+        $pages = Game::whereHas('cover')->whereHas('platforms')->with(['cover', 'platforms', 'genres'])->where('total_rating_count', '>=', 25)->where('name', 'ilike', '%'.request('name').'%')->take(500)->get()->count() / 10;
+        $games = Game::whereHas('cover')->whereHas('platforms')->with(['cover', 'platforms', 'genres'])->where('total_rating_count', '>=', 25)->where('name', 'ilike', '%'.request('name').'%');
+
+        //If order is set, order the query
+        if(request('by') && request('how')){
+            $games = $games->orderBy(request('by'), request('how'))->skip((request('page')-1)*10)->take(10)->get();
+        } else {
+            $games = $games->skip((request('page')-1)*10)->take(10)->get();
+        }
         
+        //Get all the available genres
+        $genres = Genre::all();
+
         return view('result', [
             'games' => $games,
+            'genres' => $genres,
             'pages' => $pages
         ]);
     }
 
     public function all(){
+        //Base query
         $pages = Game::whereHas('cover')->whereHas('platforms')->whereHas('genres')->where('total_rating_count', '>=', 25)->with(['cover', 'platforms', 'genres'])->count() / 10; 
-        $games = Game::whereHas('cover')->whereHas('platforms')->whereHas('genres')->where('total_rating_count', '>=', 25)->with(['cover', 'platforms', 'genres'])->orderBy(request('by'), request('how'))->skip((request('page'))*10)->take(10)->get();
+        $games = Game::whereHas('cover')->whereHas('platforms')->whereHas('genres')->where('total_rating_count', '>=', 25)->with(['cover', 'platforms', 'genres']);
         
-        dd($games[0]->genres);
+        //If order is set, order the query
+        if(request('by') && request('how')){
+            $games = $games->orderBy(request('by'), request('how'))->skip((request('page'))*10)->take(10)->get();
+        } else {
+            $games = $games->skip((request('page'))*10)->take(10)->get();
+        }
+
+
+        //Get all the available genres
+        $genres = Genre::all();
+
         return view('result', [
             'games' => $games,
+            'genres' => $genres,
             'pages' => ceil($pages)
         ]);
     }
