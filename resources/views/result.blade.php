@@ -15,7 +15,11 @@
         <div id="filters" x-data="{show : false}">
             <h3 @click="show =! show" class="btn-link filter-btn">Filter by</h3>
             <div class="filter-opts" x-show="show" @click.away="show = false">
-                
+                <div x-show="genres" id="genres">
+                    @foreach ($genres as $genre)
+                        <a class="filter-opt">{{ $genre->name }}</a>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>

@@ -8,12 +8,20 @@ $('.pag-link').on('click', function(){
     window.location.search = searchParams.toString();
 })
 
-//This goes with the order and filter functionality
+//This goes with the order functionality
 $('.filter-opt').on('click', function(){
     let by = $(this).attr('data-by');
     let how = $(this).attr('data-how');
     var searchParams = new URLSearchParams(window.location.search);
     searchParams.set('by', by);
     searchParams.set('how', how);
+    window.location.search = searchParams.toString();
+})
+
+//This goes with the filter functionality
+$('#genres').children().on('click', function(){
+    let genre = $(this).text();
+    var searchParams = new URLSearchParams(window.location.search);
+    searchParams.set('genre', genre);
     window.location.search = searchParams.toString();
 })

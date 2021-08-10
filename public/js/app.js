@@ -1847,7 +1847,7 @@ $('.pag-link').on('click', function () {
   var searchParams = new URLSearchParams(window.location.search);
   searchParams.set("page", $(this).text() - 1);
   window.location.search = searchParams.toString();
-}); //This goes with the order and filter functionality
+}); //This goes with the order functionality
 
 $('.filter-opt').on('click', function () {
   var by = $(this).attr('data-by');
@@ -1855,6 +1855,13 @@ $('.filter-opt').on('click', function () {
   var searchParams = new URLSearchParams(window.location.search);
   searchParams.set('by', by);
   searchParams.set('how', how);
+  window.location.search = searchParams.toString();
+}); //This goes with the filter functionality
+
+$('#genres').children().on('click', function () {
+  var genre = $(this).text();
+  var searchParams = new URLSearchParams(window.location.search);
+  searchParams.set('genre', genre);
   window.location.search = searchParams.toString();
 });
 

@@ -115,15 +115,25 @@ header #github {
 }
 
 #order-page {
-  margin: 0;
+  margin: auto;
+  display: flex;
+  width: 100%;
 }
 #order-page #order {
+  margin-right: auto;
+  margin-left: auto;
+}
+#order-page #filters {
+  margin-left: auto;
+  margin-right: auto;
+}
+#order-page #order, #order-page #filters {
   width: 10vw;
-  margin-bottom: 0;
   position: relative;
 }
-#order-page #order .filter-btn {
+#order-page #order .filter-btn, #order-page #filters .filter-btn {
   max-width: 100%;
+  min-width: 100px;
   margin: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -131,25 +141,33 @@ header #github {
           user-select: none;
   cursor: pointer;
 }
-#order-page #order .filter-opts {
+#order-page #order .filter-opts, #order-page #filters .filter-opts {
   position: absolute;
   left: 10px;
   width: 100%;
+  min-width: 150px;
   background-color: #1A1A1B;
   border: 1px solid #676869;
+  overflow-y: scroll;
+  z-index: 2;
 }
-#order-page #order .filter-opts .filter-opt {
-  display: block;
+#order-page #order .filter-opts #genres, #order-page #filters .filter-opts #genres {
+  max-height: 250px;
+  overflow-y: scroll;
+}
+#order-page #order .filter-opts .filter-opt, #order-page #filters .filter-opts .filter-opt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   height: 50px;
-  line-height: 50px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
 }
-#order-page #order .filter-opts .filter-opt i {
+#order-page #order .filter-opts .filter-opt i, #order-page #filters .filter-opts .filter-opt i {
   font-size: 20px;
 }
 

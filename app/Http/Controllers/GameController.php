@@ -31,7 +31,7 @@ class GameController extends Controller
             $games = $games->skip((request('page')-1)*10)->take(10)->get();
         }
         
-        //Get all the available genres
+        //Get all the available genres and companies
         $genres = Genre::all();
 
         return view('result', [

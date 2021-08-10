@@ -8,15 +8,27 @@
 }
 
 #order-page{
-    margin: 0;
+    margin: auto;
+    display: flex;
+    width: 100%;
 
     #order{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #filters{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #order, #filters{
         width: 10vw;
-        margin-bottom: 0;
         position: relative;
 
         .filter-btn{
             max-width: 100%;
+            min-width: 100px;
             margin: 0;
             user-select: none;
             cursor: pointer;
@@ -26,14 +38,23 @@
             position: absolute;
             left: 10px;
             width: 100%;
+            min-width: 150px;
             background-color: $container-background;
             border: 1px solid $border;
+            overflow-y: scroll;
+            z-index: 2;
+
+            #genres{
+                max-height: 250px;
+                overflow-y: scroll;
+            }
 
             .filter-opt{
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 text-align: center;
                 height: 50px;
-                line-height: 50px;
                 user-select: none;
                 cursor: pointer;
 
