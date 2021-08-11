@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [GameController::class, 'index']);
 Route::get('/search', [GameController::class, 'search']);
-Route::get('/collectios', [GameController::class, 'collections']);
+Route::get('/collections', [GameController::class, 'collections']);
 Route::get('/games', [GameController::class, 'all']);
 Route::get('/games/{game:slug}', [GameController::class, 'game']);
 
