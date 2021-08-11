@@ -494,3 +494,11 @@
 1628697800-5629-804828773,1628697800.5467,GET,/search?name=dsadssa,"App\Http\Controllers\GameController@search",200,2898.3371257782,request
 1628697832-9632-917313304,1628697832.9451,GET,/search?name=dsadssa,"App\Http\Controllers\GameController@search",200,86.817979812622,request
 1628697851-9438-716017229,1628697851.9289,GET,/game/dsaodsa,,404,38.81311416626,request
+1628698382-0187-97997756,1628698382.003,GET,/,"App\Http\Controllers\GameController@index",200,2287.2610092163,request
+1628703857-0579-1216451184,1628703856.9839,GET,/games/the-witcher-3-wild-hunt-blood-and-wine,"App\Http\Controllers\GameController@game",200,1231.2269210815,request
+1628707591-0776-1528559860,1628707590.9872,GET,/games,"App\Http\Controllers\GameController@all",200,3445.531129837,request
+1628707598-9718-390396233,1628707598.9562,GET,/games?by=first_release_date&how=asc,"App\Http\Controllers\GameController@all",200,1606.9629192352,request
+1628707611-2018-1527669241,1628707611.1846,GET,/games?by=first_release_date&how=asc&page=338,"App\Http\Controllers\GameController@all",200,1195.9300041199,request
+1628707625-2848-1704603864,1628707625.2694,GET,/games?by=first_release_date&how=asc&page=333,"App\Http\Controllers\GameController@all",200,1000.5280971527,request
+1628707636-5641-1553429101,1628707636.5501,GET,/games/mortal-shell,"App\Http\Controllers\GameController@game",200,995.05305290222,request
+1628708733-1781-1797509459,1628708733.1544,GET,/games/mortal-shell,"App\Http\Controllers\GameController@game",200,105.52787780762,request
