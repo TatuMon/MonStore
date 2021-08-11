@@ -31,6 +31,11 @@
                         @endif
                     @endforeach
                 </p>
+                @if ($game->parent_game)
+                    <p class="parent">
+                        This game belongs to: <a class="text-link" href="/games/{{ $game->parent_game['slug'] }}">{{ $game->parent_game['name'] }}</a>
+                    </p>
+                @endif
             </div>
 
             <div id="add-info-links">

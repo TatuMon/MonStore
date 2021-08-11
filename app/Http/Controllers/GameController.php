@@ -68,12 +68,16 @@ class GameController extends Controller
     }
 
     public function game($game_slug){
-        $game = Game::where('slug', $game_slug)->with(['cover', 'platforms', 'websites', 'genres', 'collection', 'dlcs', 'dlcs.cover', 'dlcs.platforms', 'dlcs.genres', 'expansions', 'expansions.cover', 'expansions.platforms', 'expansions.genres', 'parent_game', 'videos', 'screenshots'])->get();
+        $game = Game::where('slug', $game_slug)->with(['cover', 'platforms', 'websites', 'genres', 'collection', 'dlcs', 'dlcs.cover', 'dlcs.platforms', 'dlcs.genres', 'expansions', 'expansions.cover', 'expansions.platforms', 'expansions.genres', 'parent_game', 'videos', 'screenshots'])->get()->first();
         $webEnum = WebEnum::Official();
 
-        return view('game', [
-            'game' => $game[0],
-            'webEnum' => compact('webEnum')
-        ]);
+        if($game){
+            return view('game', [
+                'game' => $game,
+                'webEnum' => compact('webEnum')
+            ]);
+        } else {
+            abort(404);
+        }
     }
 }
