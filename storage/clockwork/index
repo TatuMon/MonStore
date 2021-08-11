@@ -453,3 +453,9 @@
 1628628803-6118-535436334,1628628803.5965,GET,/games/the-legend-of-zelda-breath-of-the-wild-the-master-trials,"App\Http\Controllers\GameController@game",200,92.756986618042,request
 1628628863-6206-169559026,1628628863.604,GET,/games/the-legend-of-zelda-breath-of-the-wild-the-master-trials,"App\Http\Controllers\GameController@game",200,70.643186569214,request
 1628628907-6132-1401791956,1628628907.5938,GET,/games/the-legend-of-zelda-breath-of-the-wild-the-master-trials,"App\Http\Controllers\GameController@game",200,47.980070114136,request
+1628630240-8294-433226665,1628630240.7368,GET,/games/the-legend-of-zelda-breath-of-the-wild-the-master-trials,"App\Http\Controllers\GameController@game",200,205.28316497803,request
+1628692959-1781-435738678,1628692958.7794,GET,/games/the-legend-of-zelda-breath-of-the-wild-the-master-trials,"App\Http\Controllers\GameController@game",200,1777.5812149048,request
+1628693115-6937-9727850,1628693115.6744,GET,/games/the-legend-of-zelda-breath-of-the-wild-the-master-trials,"App\Http\Controllers\GameController@game",200,50.580024719238,request
+1628693184-8956-1755589605,1628693184.8806,GET,/games/the-legend-of-zelda-breath-of-the-wild-the-master-trials,"App\Http\Controllers\GameController@game",200,40.071964263916,request
+1628693198-6028-687516092,1628693198.5858,GET,/games/the-legend-of-zelda-breath-of-the-wild-the-master-trials,"App\Http\Controllers\GameController@game",200,82.381010055542,request
+1628693537-2640-403297113,1628693537.16,GET,/games/the-legend-of-zelda-breath-of-the-wild-the-master-trials,"App\Http\Controllers\GameController@game",200,201.35617256165,request

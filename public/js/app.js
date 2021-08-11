@@ -1883,7 +1883,7 @@ __webpack_require__(/*! ./info-slider */ "./resources/js/info-slider.js");
 
 __webpack_require__(/*! ./add-parameters */ "./resources/js/add-parameters.js");
 
-__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module './game-page'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+__webpack_require__(/*! ./game-page */ "./resources/js/game-page.js");
 
 /***/ }),
 
@@ -1943,6 +1943,21 @@ $('.arrow-prev').on('click', function () {
   }
 
   console.log(-550 * index);
+});
+
+/***/ }),
+
+/***/ "./resources/js/game-page.js":
+/*!***********************************!*\
+  !*** ./resources/js/game-page.js ***!
+  \***********************************/
+/***/ (() => {
+
+//Check if a game has external links
+$('.game-links').each(function (i, obj) {
+  if ($(this).children().length == 0) {
+    $(this).append('<p>No available links</p>');
+  }
 });
 
 /***/ }),
