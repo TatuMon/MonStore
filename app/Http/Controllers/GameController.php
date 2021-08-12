@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use MarcReichel\IGDBLaravel\Models\Game;
 use MarcReichel\IGDBLaravel\Models\Genre;
-use MarcReichel\IGDBLaravel\Models\Collection;
+use MarcReichel\IGDBLaravel\Models\Franchise;
 use App\Http\Helpers\WebEnum;
 
 class GameController extends Controller
@@ -65,14 +65,6 @@ class GameController extends Controller
             'games' => $games,
             'genres' => $genres,
             'pages' => ceil($pages)
-        ]);
-    }
-
-    public function collections(){
-        $collections = Collection::orderByDesc('updated_at')->get();
-
-        return view('collections', [
-            'collections' => $collections
         ]);
     }
 

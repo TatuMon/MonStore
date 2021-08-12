@@ -3,10 +3,6 @@
         <i class="fas fa-gamepad"></i>
         Games
     </a>
-    <a href="/collections">
-        <i class="fas fa-layer-group"></i>
-        Collections
-    </a>
     <a href="/info">
         <i class="fas fa-info"></i>
         Info
