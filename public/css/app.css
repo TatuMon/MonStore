@@ -384,6 +384,67 @@ header #github {
   width: 50%;
 }
 
+@media (max-width: 1000px) {
+  #game #game-main-info {
+    width: 100%;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(4);
+  }
+  #game #game-main-info #cover {
+    grid-row: 1;
+    grid-column: 1;
+    margin: auto;
+  }
+  #game #game-main-info #cover img {
+    border-radius: 10px;
+  }
+  #game #game-main-info #name {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 0px;
+    width: 100%;
+    text-align: center;
+  }
+  #game #game-main-info #name h1, #game #game-main-info #name p {
+    margin: 0;
+  }
+  #game #game-main-info #description {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  #game #game-main-info #description #rating {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  #game #game-main-info #description .platforms {
+    font-size: 15px;
+  }
+  #game #game-main-info #add-info-links {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    grid-column: 1;
+    grid-row: 4;
+    margin: auto;
+    margin-top: 0;
+    display: flex;
+    width: 100%;
+  }
+  #game #game-main-info #add-info-links a {
+    width: 100%;
+    margin: 10px auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+  }
+  #game #game-multimedia #trailer .video {
+    width: 100%;
+  }
+}
 #info-main {
   width: 70%;
   margin: auto;

@@ -134,3 +134,75 @@
         }
     }
 }
+
+@media (max-width: 1000px){
+    #game{
+        #game-main-info{
+            width: 100%;
+            grid-template-columns: repeat(1, 100%);
+            grid-template-rows: repeat(4);
+
+            #cover{
+                grid-row: 1;
+                grid-column: 1;
+                margin: auto;
+    
+                img{
+                    border-radius: 10px;
+                }
+            }
+        
+            #name{
+                grid-column: 1;
+                grid-row: 2;
+                margin-left: 0px;
+                width: 100%;
+                text-align: center;
+    
+                h1, p{
+                    margin: 0;
+                }
+            }
+        
+            #description{
+                grid-row: 3;
+                grid-column: 1;
+    
+                #rating{
+                    user-select: none;
+                }
+    
+                .platforms{
+                    font-size: 15px;
+                }
+            }
+    
+            #add-info-links{
+                user-select: none;
+                grid-column: 1;
+                grid-row: 4;
+                margin: auto;
+                margin-top: 0;
+                display: flex;
+                width: 100%;
+    
+                a{
+                    width: 100%;
+                    margin: 10px auto;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: block;
+                }
+            }
+        }
+
+        #game-multimedia{
+            #trailer{
+                .video{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
