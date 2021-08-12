@@ -171,7 +171,7 @@ header #github {
 
 @media (max-width: 1000px) {
   #result-main {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(auto-fill, 1fr);
     width: 100%;
     gap: 5px;
   }
