@@ -441,6 +441,9 @@ header #github {
     white-space: nowrap;
     display: block;
   }
+  #game #game-multimedia #trailer {
+    width: 90%;
+  }
   #game #game-multimedia #trailer .video {
     width: 100%;
   }
