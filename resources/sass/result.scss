@@ -66,6 +66,7 @@
 
 @media (max-width: 1000px){
     #result-main{
+        grid-template-columns: repeat(2, 50%);
         width: 100%;
         gap: 5px;
     }
