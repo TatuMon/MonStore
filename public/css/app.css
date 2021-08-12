@@ -55,7 +55,7 @@
   }
 
   #main {
-    margin-left: 10px;
+    margin-left: 0px;
     margin-bottom: 65px;
   }
 }
@@ -171,6 +171,7 @@ header #github {
 
 @media (max-width: 1000px) {
   #result-main {
+    grid-template-columns: repeat(2, 50%);
     width: 100%;
     gap: 5px;
   }
