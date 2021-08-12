@@ -48,7 +48,7 @@
             display: flex;
             width: 100%;
 
-            a{
+            button{
                 margin: 10px auto;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -57,9 +57,15 @@
             }
         }
 
-        .game-link{
-            display: flex;
+        #links{
+            grid-column: 1/4;
 
+            #buy, #communities, #official{
+                display: none;
+                width: 100%;
+                text-align: center;
+                padding: 25px 0;
+            }
         }
     }
 
@@ -106,30 +112,6 @@
 
             :last-child{
                 margin-right: auto;
-            }
-        }
-    }
-
-    #links{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-
-        #buy, #communities, #official{
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        #official .game-links{
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(2, 0.5fr);
-            justify-items: center;
-            text-align: center;
-
-            a{
-                width:50%;
             }
         }
     }
@@ -186,13 +168,21 @@
                 display: flex;
                 width: 100%;
     
-                a{
+                button{
                     width: 100%;
                     margin: 10px auto;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     display: block;
+                }
+            }
+            
+            
+            #links{
+                margin: auto;
+                #buy, #communities, #official{
+                    width: auto;
                 }
             }
         }

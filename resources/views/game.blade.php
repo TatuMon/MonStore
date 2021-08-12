@@ -39,9 +39,41 @@
             </div>
 
             <div id="add-info-links">
-                <a class="btn-link" href="#buy">Buy</a>
-                <a class="btn-link" href="#communities">Communities</a>
-                <a class="btn-link" href="#official">Official</a>
+                <button class="btn-link" href="#buy">Buy</button>
+                <button class="btn-link" href="#communities">Communities</button>
+                <button class="btn-link" href="#official">Official</button>
+            </div>
+            <div id="links">
+                <div id="buy" class="info-link">
+                    <h3><i class="fas fa-shopping-cart"></i>BUY:</h3>
+                    <div id="buy-links" class="game-links">
+                        @foreach ($game->websites as $website)
+                            @if (10 <= $website['category'] && $website['category'] != 14 && $website['category'] <= 17)
+                                <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
+                <div id="communities" class="info-link">
+                    <h3>COMMUNITIES:</h3>
+                    <div id="comm-links" class="game-links">
+                        @foreach ($game->websites as $website)
+                            @if ($website['category'] == 14 || $website['category'] == 18)
+                                <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
+                <div id="official" class="info-link">
+                    <h3>OFFICIAL:</h3>
+                    <div id="off-links" class="game-links">
+                        @foreach ($game->websites as $website)
+                            @if ($website['category'] >= 1 && $website['category'] <= 9)
+                                <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
             </div>
         </div>
         <div id="game-multimedia">
@@ -83,38 +115,6 @@
                     </div>
                 @endif
             @endif
-        </div>
-        <div id="links">
-            <div id="buy">
-                <h3><i class="fas fa-shopping-cart"></i>BUY:</h3>
-                <div id="buy-links" class="game-links">
-                    @foreach ($game->websites as $website)
-                        @if (10 <= $website['category'] && $website['category'] != 14 && $website['category'] <= 17)
-                            <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
-                        @endif
-                    @endforeach
-                </div>
-            </div>
-            <div id="communities">
-                <h3>COMMUNITIES:</h3>
-                <div id="comm-links" class="game-links">
-                    @foreach ($game->websites as $website)
-                        @if ($website['category'] == 14 || $website['category'] == 18)
-                            <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
-                        @endif
-                    @endforeach
-                </div>
-            </div>
-            <div id="official">
-                <h3>OFFICIAL:</h3>
-                <div id="off-links" class="game-links">
-                    @foreach ($game->websites as $website)
-                        @if ($website['category'] >= 1 && $website['category'] <= 9)
-                            <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
-                        @endif
-                    @endforeach
-                </div>
-            </div>
         </div>
     </div>
 </x-layout>

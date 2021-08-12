@@ -41,6 +41,9 @@ a{
 }
 
 .btn-link{
+    background-color: $background;
+    color: $font;
+    font-weight: bolder;
     width: 10vw;
     text-align: center;
     font-weight: bolder;
