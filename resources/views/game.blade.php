@@ -31,6 +31,14 @@
                         @endif
                     @endforeach
                 </p>
+                <p class="multiplayers">
+                    @if ($game->multiplayer_modes[0]['campaigncoop'])
+                        Coop
+                    @endif
+                    @if ($game->multiplayer_modes[0]['onlinecoop'])
+                        Online
+                    @endif
+                </p>
                 <p class="developers">
                     @foreach ($game->involved_companies as $involved_company)
                         @if ($involved_company['developer'])
