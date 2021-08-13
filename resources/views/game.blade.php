@@ -31,6 +31,13 @@
                         @endif
                     @endforeach
                 </p>
+                <p class="developers">
+                    @foreach ($game->involved_companies as $involved_company)
+                        @if ($involved_company['developer'])
+                            Developed by: {{ $involved_company['company']['name'] }}
+                        @endif
+                    @endforeach
+                </p>
                 @if ($game->parent_game)
                     <p class="parent">
                         This game belongs to: <a class="text-link" href="/games/{{ $game->parent_game['slug'] }}">{{ $game->parent_game['name'] }}</a>
