@@ -18,10 +18,15 @@ $('.screenshot').each(function(i, obj){
         let ss = $(this);
         let expandedEl = $('#expanded-ss');
 
-        expandedEl.children('img').attr('src', ss.attr('src'));
+        expandedEl.children('img').attr('src', ss.attr('src').replace('t_screenshot_med', 't_1080p'));
         expandedEl.slideToggle(500);
         expandedEl.on('click', function(e){
-            $(this).slideToggle(500);
+            var container = $(this);
+
+            if (container.is(e.target) && container.has(e.target).length === 0) 
+            {
+                container.css('display', 'none');
+            }
         });
     })
 });
