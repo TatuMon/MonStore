@@ -92,9 +92,12 @@
             <div id="screenshots">
                 @foreach ($game->screenshots as $ss)
                     @if ($loop->index < 4)
-                        <img src="{{ str_replace('t_thumb', 't_screenshot_med', $ss['url'] ?? null) }}">
+                        <img src="{{ str_replace('t_thumb', 't_screenshot_med', $ss['url'] ?? null) }}" id="img-{{ $loop->index }}" class="screenshot">
                     @endif
                 @endforeach
+            </div>
+            <div id="expanded-ss">
+                <img>
             </div>
         </div>
         <div id="add-content">

@@ -353,6 +353,29 @@ header #github {
   width: 20vw;
   border-radius: 10px;
 }
+#game #game-multimedia #expanded-ss {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: none;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+}
+#game #game-multimedia #expanded-ss img {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 2px solid #9a9b9c;
+}
 #game #add-content {
   margin: auto;
 }

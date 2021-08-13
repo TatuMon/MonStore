@@ -93,6 +93,28 @@
                 border-radius: 10px;
             }
         }
+
+        #expanded-ss{
+            user-select: none;
+            display: none;
+            position: fixed;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            width: 100vw;
+            height: 100vh;
+
+            img{
+                width: 80%;
+                height: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                border: 2px solid $input-border;
+            }
+        }
     }
 
     #add-content{
