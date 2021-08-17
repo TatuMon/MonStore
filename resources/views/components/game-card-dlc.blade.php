@@ -2,7 +2,11 @@
 
 <div id="game-{{ $loop->index }}" class="game-card">
     <a href="/games/{{ $game['slug'] }}" style="inline-block">
-        <img src="{{ str_replace('t_thumb', 't_cover_big', $game['cover']['url'] ?? null) }}">
+        @if (isset($game['cover']))
+            <img src="{{ str_replace('t_thumb', 't_cover_big', $game['cover']['url'] ?? null) }}">
+        @else
+        <img src="{{ asset('images/noCoverArt.gif') }}">
+        @endif
     </a>
     <div class="info-wrapper">
         <a class="game-name" href="/games/{{ $game['slug'] }}" style="inline-block">{{ $game['name'] }}</a>

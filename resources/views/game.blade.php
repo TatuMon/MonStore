@@ -8,7 +8,9 @@
 
             <div id="name">
                 <h1>{{ $game->name }}</h1>
-                <p>{{ $game->first_release_date->format('Y') }}</p>
+                @if ($game->first_release_date)
+                    <p>{{ $game->first_release_date->format('Y') }}</p>
+                @endif
             </div>
 
             <div id="description">
@@ -16,35 +18,43 @@
                 <p id="rating"><i class="fas fa-star"></i>{{ round($game->total_rating) }}/100</p>
                     
                 <p class="genres">
-                    @foreach($game->genres as $genre)
-                        {{ $genre['name'] }}
-                        @if(!$loop->last)
-                            | 
-                        @endif
-                    @endforeach
+                    @if ($game->genres)
+                        @foreach($game->genres as $genre)
+                            {{ $genre['name'] }}
+                            @if(!$loop->last)
+                                | 
+                            @endif
+                        @endforeach
+                    @endif
                 </p>
                 <p class="platforms">
-                    @foreach($game->platforms as $platform)
-                        {{ $platform['name'] }}
-                        @if(!$loop->last)
-                            | 
-                        @endif
-                    @endforeach
+                    @if ($game->platforms)
+                        @foreach($game->platforms as $platform)
+                            {{ $platform['name'] }}
+                            @if(!$loop->last)
+                                | 
+                            @endif
+                        @endforeach
+                    @endif
                 </p>
                 <p class="multiplayers">
-                    @if ($game->multiplayer_modes[0]['campaigncoop'])
-                        Coop
-                    @endif
-                    @if ($game->multiplayer_modes[0]['onlinecoop'])
-                        Online
+                    @if ($game->multiplayer_modes)
+                        @if ($game->multiplayer_modes[0]['campaigncoop'])
+                            Coop
+                        @endif
+                        @if ($game->multiplayer_modes[0]['onlinecoop'])
+                            Online
+                        @endif
                     @endif
                 </p>
                 <p class="developers">
-                    @foreach ($game->involved_companies as $involved_company)
-                        @if ($involved_company['developer'])
-                            Developed by: {{ $involved_company['company']['name'] }}
-                        @endif
-                    @endforeach
+                    @if ($game->involved_companies)
+                        @foreach ($game->involved_companies as $involved_company)
+                            @if ($involved_company['developer'])
+                                Developed by: {{ $involved_company['company']['name'] }}
+                            @endif
+                        @endforeach
+                    @endif
                 </p>
                 @if ($game->parent_game)
                     <p class="parent">
@@ -62,31 +72,37 @@
                 <div id="buy" class="info-link">
                     <h3><i class="fas fa-shopping-cart"></i>BUY:</h3>
                     <div id="buy-links" class="game-links">
-                        @foreach ($game->websites as $website)
-                            @if (10 <= $website['category'] && $website['category'] != 14 && $website['category'] <= 17)
-                                <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
-                            @endif
-                        @endforeach
+                        @if ($game->websites)
+                            @foreach ($game->websites as $website)
+                                @if (10 <= $website['category'] && $website['category'] != 14 && $website['category'] <= 17)
+                                    <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
+                                @endif
+                            @endforeach
+                        @endif
                     </div>
                 </div>
                 <div id="communities" class="info-link">
                     <h3>COMMUNITIES:</h3>
                     <div id="comm-links" class="game-links">
-                        @foreach ($game->websites as $website)
-                            @if ($website['category'] == 14 || $website['category'] == 18)
-                                <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
-                            @endif
-                        @endforeach
+                        @if ($game->websites)
+                            @foreach ($game->websites as $website)
+                                @if ($website['category'] == 14 || $website['category'] == 18)
+                                    <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
+                                @endif
+                            @endforeach
+                        @endif
                     </div>
                 </div>
                 <div id="official" class="info-link">
                     <h3>OFFICIAL:</h3>
                     <div id="off-links" class="game-links">
-                        @foreach ($game->websites as $website)
-                            @if ($website['category'] >= 1 && $website['category'] <= 9)
-                                <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
-                            @endif
-                        @endforeach
+                        @if ($game->websites)
+                            @foreach ($game->websites as $website)
+                                @if ($website['category'] >= 1 && $website['category'] <= 9)
+                                    <a class="btn-link" href="{{ $website['url'] }}" target="_blank">{{ $webEnum['webEnum']->search($website['category']) }}</a>
+                                @endif
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div>

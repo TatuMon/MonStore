@@ -352,6 +352,7 @@ header #github {
 #game #game-multimedia #screenshots img {
   width: 20vw;
   border-radius: 10px;
+  cursor: zoom-in;
 }
 #game #game-multimedia #expanded-ss {
   -webkit-user-select: none;
