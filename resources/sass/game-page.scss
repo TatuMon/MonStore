@@ -127,6 +127,12 @@
             .game-card{
                 margin-left: 20px;
                 margin-right: 20px;
+                font-weight: lighter;
+                font-size: 15px;
+
+                .game-name{
+                    font-size: 20px;
+                }
             }
 
             :first-child{

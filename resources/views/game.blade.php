@@ -121,11 +121,13 @@
                 @endif
             </div>
             <div id="screenshots">
-                @foreach ($game->screenshots as $ss)
-                    @if ($loop->index < 4)
-                        <img src="{{ str_replace('t_thumb', 't_screenshot_med', $ss['url'] ?? null) }}" id="img-{{ $loop->index }}" class="screenshot">
-                    @endif
-                @endforeach
+                @if ($game->screenshots)
+                    @foreach ($game->screenshots as $ss)
+                        @if ($loop->index < 4)
+                            <img src="{{ str_replace('t_thumb', 't_screenshot_med', $ss['url'] ?? null) }}" id="img-{{ $loop->index }}" class="screenshot">
+                        @endif
+                    @endforeach
+                @endif
             </div>
             <div id="expanded-ss">
                 <img>
