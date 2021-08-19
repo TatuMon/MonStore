@@ -6,7 +6,7 @@ Made with the purpose of learning and practicing the use of open REST APIs
 
 ### Technologies
 - Frontend
-    - HTML/CSS
+    - HTML/SCSS
     - JavaScript
     - Blade
 
